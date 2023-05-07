@@ -2,16 +2,15 @@
 #define EXITDIALOG_H
 
 #include <QObject>
+#include <QDialog>
+#include <QPushButton>
+#include <QLabel>
 
-// Forward declarations
-class QLabel;
-class QPushButton;
-
-class ExitDialog : public QObject
+class ExitDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ExitDialog(QObject *parent = nullptr);
+    explicit ExitDialog(QDialog *parent = nullptr);
     ~ExitDialog();
 
 private:
@@ -26,12 +25,10 @@ protected:
 
 
 signals:
-    void closeApplication(bool value);
+    void closeApplication();
 
 protected slots:
     void closeClicked();
 };
-
-
 
 #endif // EXITDIALOG_H

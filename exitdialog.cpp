@@ -8,7 +8,8 @@
 
 void ExitDialog::create_signals_slots()
 {
-    QObject::connect(this->cancel_button, SIGNAL( clicked() ),this, SLOT( closeClicked() );
+    //QObject::connect(cancel_button, SIGNAL( clicked() ),this, SLOT( closeClicked() ));
+    connect(&cancel_button, &QPushButton::clicked, this, &ExitDialog::closeClicked );
 }
 
 void ExitDialog::layout_members()
@@ -18,28 +19,23 @@ void ExitDialog::layout_members()
 
 void ExitDialog::closeClicked()
 {
-    emit closeApplication(true);
+    emit closeApplication();
 }
 
-void ExitDialog::initialize()
+ExitDialog::~ExitDialog()
 {
-    create_members();
-    layout_members();
+
 }
 
 ExitDialog::ExitDialog(QDialog *parent)
     : QDialog{parent}
 {
-    this->title_label = new QLabel("Exit?");
-    this->okay_button = new QPushButton("OK");
+    title_label = new QLabel("Exit?");
+    okay_button = new QPushButton("OK");
 
-    this->cancel_button = new QPushButton("Cancel");
+    cancel_button = new QPushButton("Cancel");
     // Cancel will be the button that activates if a user presses the Enter key
-    this->cancel_button->setDefault(true);
+    cancel_button->setDefault(true);
 }
 
 
-~ExitDialog()
-{
-
-}

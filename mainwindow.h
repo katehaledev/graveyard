@@ -17,7 +17,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_exit_click();
 
 private:
     Ui::MainWindow *ui;
