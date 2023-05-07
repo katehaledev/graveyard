@@ -5,6 +5,9 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QLabel>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QWidget>
 
 class ExitDialog : public QDialog
 {
@@ -14,20 +17,22 @@ public:
     ~ExitDialog();
 
 private:
+    QWidget* window;
     QLabel* title_label;
     QPushButton* okay_button;
     QPushButton* cancel_button;
+    QHBoxLayout *button_layout;
+    QVBoxLayout *label_and_buttons_layout;
 
 protected:
-    void create_members();
-    void create_signals_slots();
-    void layout_members();
+    void createSignalsAndSlots();
+    void layoutMembers();
 
 
 signals:
     void closeApplication();
 
-protected slots:
+public slots:
     void closeClicked();
 };
 
