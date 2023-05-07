@@ -21,5 +21,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    ExitDialog *ed;
+
 };
 #endif // MAINWINDOW_H

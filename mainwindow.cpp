@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // When the Exit menu action is clicked, let the Exit Dialog know
-    ExitDialog *ed = new ExitDialog;
+    ed = new ExitDialog();
     QObject::connect(ui->actionExit, &QAction::triggered, ed, &ExitDialog::exitClicked);
     //connect(ui->actionExit, &QAction::triggered, this, [=](){ std::cout << "Exit triggered" << std::endl; });
 
