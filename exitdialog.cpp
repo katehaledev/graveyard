@@ -74,6 +74,9 @@ ExitDialog::ExitDialog(QDialog *parent)
     // Cancel will be the button that activates if a user presses the Enter key
     cancel_button->setDefault(true);
 
+    title_label->setAlignment(Qt::AlignHCenter);
+    setWindowTitle("Exit Graveyard?");
+
     createSignalsAndSlots();
     layoutMembers();
 }
