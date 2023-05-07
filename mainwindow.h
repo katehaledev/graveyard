@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QAction>
 #include "exitdialog.h"
 
 QT_BEGIN_NAMESPACE

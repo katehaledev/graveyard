@@ -1,12 +1,14 @@
 #include <QtGui>
 #include <QVBoxLayout>
 #include <QMessageBox>
+#include <iostream>
 
 #include "exitdialog.h"
 
 void ExitDialog::createSignalsAndSlots()
 {
-    connect(cancel_button, SIGNAL( clicked() ),this, SLOT( closeClicked() ));
+    connect(cancel_button, &QPushButton::clicked,this, [=](){ close(); });
+    connect(okay_button, &QPushButton::clicked, this, [=](){ emit closeApplication(); });
 }
 
 void ExitDialog::layoutMembers()
@@ -19,21 +21,23 @@ void ExitDialog::layoutMembers()
     setLayout(label_and_buttons_layout);
 }
 
-void ExitDialog::closeClicked()
+void ExitDialog::exitClicked(bool c)
 {
-    emit closeApplication();
+    std::cout << "exitClicked fired" << std::endl;
+    printf("Slot triggered!");
 }
+
 
 ExitDialog::~ExitDialog()
 {
+
 }
 
 ExitDialog::ExitDialog(QDialog *parent)
     : QDialog{parent}
 {
-    window = new QWidget;
     label_and_buttons_layout = new QVBoxLayout();
-    button_layout = new QHBoxLayout(window);
+    button_layout = new QHBoxLayout();
     title_label = new QLabel("Exit?");
     okay_button = new QPushButton("OK");
 
@@ -41,10 +45,8 @@ ExitDialog::ExitDialog(QDialog *parent)
     // Cancel will be the button that activates if a user presses the Enter key
     cancel_button->setDefault(true);
 
+    createSignalsAndSlots();
     layoutMembers();
-
-    exec();
-
 
 
 }

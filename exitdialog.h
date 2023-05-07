@@ -12,12 +12,12 @@
 class ExitDialog : public QDialog
 {
     Q_OBJECT
+
 public:
     explicit ExitDialog(QDialog *parent = nullptr);
     ~ExitDialog();
 
 private:
-    QWidget* window;
     QLabel* title_label;
     QPushButton* okay_button;
     QPushButton* cancel_button;
@@ -33,7 +33,7 @@ signals:
     void closeApplication();
 
 public slots:
-    void closeClicked();
+    void exitClicked(bool c);
 };
 
 #endif // EXITDIALOG_H
