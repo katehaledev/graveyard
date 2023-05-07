@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/orig">
+        <file alias="git_avatar">simself.png</file>
+    </qresource>
+    <qresource prefix="/100">
+        <file alias="git_100">simself_100.png</file>
+    </qresource>
+</RCC>
