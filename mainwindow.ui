@@ -6,41 +6,103 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>759</width>
-    <height>672</height>
+    <width>1175</width>
+    <height>874</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Graveyard</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_git_link">
+   <widget class="Line" name="line">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>610</y>
-      <width>145</width>
-      <height>17</height>
+      <y>750</y>
+      <width>1131</width>
+      <height>16</height>
      </rect>
     </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;made with &lt;span style=&quot; color:#cc0000;&quot;&gt;&amp;lt;3&lt;/span&gt; by &lt;a href=&quot;https://github.com/katehaledev/graveyard&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#888a85;&quot;&gt;kate&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
-    <property name="openExternalLinks">
-     <bool>true</bool>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>789</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#2e3436;&quot;&gt;GPL-3.0 license &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_github">
+       <property name="toolTip">
+        <string>Graveyard source code on github</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/katehaledev/graveyard&quot;&gt;&lt;img src=&quot;:/orig/github_25.png&quot;/&gt;&lt;/a&gt;&lt;a name=&quot;bottom&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_kofi">
+       <property name="toolTip">
+        <string>But me a coffee</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://ko-fi.com/katehaledev&quot;&gt;&lt;img src=&quot;:/orig/50_kofi.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="label_git_icon">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>504</y>
-      <width>145</width>
-      <height>100</height>
+      <y>790</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/100/git_100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_git_link">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>770</y>
+      <width>107</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;made with &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#cc0000;&quot;&gt;&amp;lt;3&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; by &lt;/span&gt;&lt;a href=&quot;https://github.com/katehaledev&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#888a85;&quot;&gt;kate&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -49,7 +111,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>759</width>
+     <width>1175</width>
      <height>22</height>
     </rect>
    </property>
