@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "exitdialog.h"
 
+
 #include <QApplication>
 #include <QFile>
 
@@ -18,6 +19,7 @@ int main(int argc, char *argv[])
     // Spin up the main window
     MainWindow w;
     w.show();
+
 
     // Launch
     return a.exec();

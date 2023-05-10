@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-MainWindow::MainWindow(QWidget *parent)
+
+MainWindow::MainWindow(QDialog *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
@@ -12,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     /**
      * HOME VIEW
      */
+
 
     // When the Exit menu action is clicked, let the Exit Dialog know
     ed = new ExitDialog();
@@ -23,6 +25,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     // When the Exit Dialog sends it's cancel button "clicked" signal, close the app:
     QObject::connect(ed, &ExitDialog::closeApplication, this, &MainWindow::close);
+
+    // When the About button is clicked, let the About Dialog know
+    ad = new AboutDialog();
+    QObject::connect(ui->aboutButton_home, &QPushButton::clicked, ad, &AboutDialog::aboutClicked);
+
 
 }
 
