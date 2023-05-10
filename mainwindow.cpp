@@ -9,10 +9,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    /**
+     * HOME VIEW
+     */
+
     // When the Exit menu action is clicked, let the Exit Dialog know
     ed = new ExitDialog();
     QObject::connect(ui->actionExit, &QAction::triggered, ed, &ExitDialog::exitClicked);
-    //connect(ui->actionExit, &QAction::triggered, this, [=](){ std::cout << "Exit triggered" << std::endl; });
+
+    // When the Exit push button is clocked, let the Exit Dialog know
+    QObject::connect(ui->exitButton_home, &QPushButton::clicked, ed, &ExitDialog::exitClicked);
 
 
     // When the Exit Dialog sends it's cancel button "clicked" signal, close the app:
