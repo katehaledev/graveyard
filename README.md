@@ -11,6 +11,12 @@ Graveyard is a companion desktop application for [The Sims 4](https://www.ea.com
 - **Family stats** - various stats about a family: number of members, number of alive and dead members, most common trait per age group, and more!
 - **Collection tracker** - no more using spreadsheets to track your frog breeding or gardening hybrids!
 
+### Pre-Alpha Teasers
+
+The first version of the application pre-release, for your viewing pleasure:
+
+#### Home View
+![pre-alpha-home](images/pre-alpha-home.png)
 
 ### Technical Details
 

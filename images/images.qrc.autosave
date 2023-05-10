@@ -22,5 +22,7 @@
         <file>by_git_name.png</file>
         <file>git_name.png</file>
     </qresource>
-    <qresource prefix="/preview_pics"/>
+    <qresource prefix="/preview_pics">
+        <file>pre-alpha-home.png</file>
+    </qresource>
 </RCC>

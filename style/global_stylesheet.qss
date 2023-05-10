@@ -1,0 +1,26 @@
+/* Global Style Sheet for all of app */
+QPushButton { background-color: rgb(159, 132, 139); }
+QMenuBar, QMenu {
+    background-color: black;
+    color: white;
+}
+
+QMenuBar::item:selected {
+    background-color: rgb(159, 132, 139);
+}
+
+QMenu::separator {
+    height: 2px;
+    background: rgb(159, 132, 139);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+QMenu::item:selected {
+    background-color: rgb(159, 132, 139);
+}
+
+QStatusBar {
+background-color: grey;
+color: white;
+}
