@@ -1,4 +1,4 @@
-/* Global Style Sheet for all of app */
+
 QPushButton { background-color: rgb(159, 132, 139); }
 QMenuBar, QMenu {
     background-color: black;
