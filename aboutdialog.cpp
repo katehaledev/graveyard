@@ -8,12 +8,12 @@ void AboutDialog::aboutClicked(bool c)
 
 AboutDialog::AboutDialog(QDialog *parent) :
     QDialog(parent),
-    ui(new Ui::AboutDialog)
+    ui_ad(new Ui::AboutDialog)
 {
-    ui->setupUi(this);
+    ui_ad->setupUi(this);
 }
 
 AboutDialog::~AboutDialog()
 {
-    delete ui;
+    delete ui_ad;
 }

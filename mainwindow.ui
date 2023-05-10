@@ -560,7 +560,7 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">#centralwidget {background-image: url(:/orig/graveyard_blurred.png);}</string>
    </property>
    <widget class="QWidget" name="widget_background" native="true">
     <property name="geometry">
@@ -582,11 +582,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">#widget_background {
-	
-	background-image: url(:/orig/graveyard_blurred.png);
-}
-</string>
+     <string notr="true"/>
     </property>
     <widget class="QLabel" name="label_header">
      <property name="geometry">

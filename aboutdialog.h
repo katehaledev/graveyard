@@ -3,9 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class AboutDialog;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class AboutDialog; }
+QT_END_NAMESPACE
 
 class AboutDialog : public QDialog
 {
@@ -16,7 +16,7 @@ public:
     ~AboutDialog();
 
 private:
-    Ui::AboutDialog *ui;
+    Ui::AboutDialog *ui_ad;
 
 public slots:
     void aboutClicked(bool c);
