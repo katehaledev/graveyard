@@ -54,7 +54,7 @@ signals:
 public slots:
     /**
      * @brief exitClicked: SLOT that will cause the ExitDialog to display when the "Exit" menu
-     * action is clicked.
+     * action or button is clicked.
      *
      * @param c: unused, just here to match the QAction signal "triggered(bool)"
      */
