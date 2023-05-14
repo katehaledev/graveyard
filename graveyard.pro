@@ -11,12 +11,15 @@ CONFIG += c++17
 SOURCES += \
     aboutdialog.cpp \
     exitdialog.cpp \
+    lastnames.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     aboutdialog.h \
+    basesim.h \
     exitdialog.h \
+    lastnames.h \
     mainwindow.h
 
 FORMS += \
