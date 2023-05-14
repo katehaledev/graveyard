@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "exitdialog.h"
 
-
 #include <QApplication>
 #include <QFile>
 

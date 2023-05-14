@@ -4,7 +4,12 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
+/**
+ * @brief The LastNames class A class that allows for the tracking of last names - such as for maiden names or
+ * previous married names.
+ */
 class LastNames
 {
 public:
@@ -20,9 +25,9 @@ public:
 
     /**
      * @brief numberOfNames Get the number of last names a Sim has had.
-     * @return the number of names.
+     * @return the number of names, or -1 if there was an issue
      */
-    int numberOfNames();
+    size_t numberOfNames();
 
 
     /**
@@ -30,7 +35,7 @@ public:
      * @param index where the name is in the list of names
      * @return the name that was removed
      */
-    std::string removeName(int* index);
+    std::string removeName(int index);
 
     /**
      * @brief removeAllNames Clear out all names
@@ -40,9 +45,15 @@ public:
 
     /**
      * @brief mostRecentLastName Get the last name added to the names list.
-     * @return the last name, without removing it from the list
+     * @return the last name, without removing it from the lis. Or an empty string if unsuccessful.
      */
     std::string mostRecentLastName();
+
+    /**
+     * @brief getAllNames
+     * @return A vector of all names. Returns an empty vector is unsuccessful.
+     */
+    std::vector<std::string> getAllNames();
 
 private:
     std::vector<std::string> names;
