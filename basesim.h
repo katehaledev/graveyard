@@ -2,9 +2,11 @@
 #define BASESIM_H
 
 #include "lastnames.h"
+#include "gender.h"
 
 #include <string>
 #include <iostream>
+#include <map>
 
 enum Sex { male, female};
 
@@ -20,6 +22,7 @@ public:
     virtual void setBioParent1(BaseSim* p);
     virtual void setSex();
     virtual void addToLastNameHistory(std::string aLastname);
+    virtual void setGender();
 
     // Getters
     virtual std::string* getFirstName() = 0;
@@ -27,6 +30,7 @@ public:
     virtual BaseSim* getBioParent1() = 0;
     virtual std::string* getPreviousLastName() = 0;
     virtual LastNames::LastNames* getLastNameHistory() = 0;
+    virtual std::map<std::string, std::string> getGender() = 0;
 
 private:
     std::string* firstName;

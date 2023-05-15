@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <algorithm>
 
 /**
  * @brief The LastNames class A class that allows for the tracking of last names - such as for maiden names or
