@@ -6,7 +6,7 @@
 #include <exception>
 #include <iostream>
 
-class Gender
+class Gender final
 {
 public:
     Gender();
